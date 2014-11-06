@@ -67,7 +67,7 @@ def download(url, id, output_path):
 
 def main():
     if len(sys.argv) != 2:
-        print('USAGE: ./upload.py INPUT_FILE_PATH')
+        print('USAGE: ./movie_to_mp4_at_server.py INPUT_FILE_PATH')
         sys.exit(1)
 
     input_path = sys.argv[1]
