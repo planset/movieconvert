@@ -12,10 +12,11 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from werkzeug import secure_filename
 
 ALLOWD_EXTENSIONS = set(['wmv', 'avi', 'flv'])
+CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///db.sqlite3'
-app.config['UPLOAD_FOLDER'] = '/home/daisuke/videoconverter/data/'
+app.config['UPLOAD_FOLDER'] = os.path.join(CURRENT_DIR, 'data/')
 app.config['MAX_CONTENT_LENGTH'] = 1 * 1024 * 1024 * 1024 # 1G まで
 
 db = SQLAlchemy(app)
