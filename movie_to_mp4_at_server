@@ -1,5 +1,5 @@
 #!/bin/bash
 
-find -E "$1" -regex ".*\.(wmv|flv|avi)" -exec $HOME/Dropbox/bin/movie_to_mp4_at_server.py {} \;
+find -E "$1" -regex ".*\.(wmv|flv|avi)" -exec ./movie_to_mp4_at_server.py {} \;
 
 exit 0

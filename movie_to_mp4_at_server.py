@@ -6,8 +6,11 @@ import urllib
 import requests
 from requests_toolbelt import MultipartEncoderMonitor
 
-upload_url = 'http://10.1.3.81:5000/upload'
-download_url = 'http://10.1.3.81:5000/download'
+HOST = '10.1.3.81'
+PORT = 5000
+server = 'http://{host}:{port}/'.format(host=HOST, port=PORT)
+upload_url = server + 'upload'
+download_url = server + 'download'
 
 def upload(url, input_path):
     if not os.path.exists(input_path):
